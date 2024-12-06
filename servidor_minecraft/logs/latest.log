@@ -1,0 +1,23 @@
+[18:52:16] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.16.3
+[18:52:16] [main/WARN]: Mod resolution failed
+[18:52:16] [main/INFO]: Immediate reason: [HARD_DEP_NO_CANDIDATE defile 1.0.0-1.20.1 {depends fabric-api @ [*]}, ROOT_FORCELOAD_SINGLE defile 1.0.0-1.20.1]
+[18:52:16] [main/INFO]: Reason: [HARD_DEP defile 1.0.0-1.20.1 {depends fabric-api @ [*]}, HARD_DEP ratatouille 1.0.7-1.20.1 {depends fabricloader @ [>=0.16.9]}, HARD_DEP ratatouille 1.0.7-1.20.1 {depends fabric-api @ [*]}, HARD_DEP datasync_minecraft 0.6.1 {depends fabric-api @ [*]}]
+[18:52:16] [main/INFO]: SERVER environment disabled: [satin]
+[18:52:16] [main/INFO]: Fix: add [add:fabric-api 1 ([(-∞,∞)])], remove [], replace [[fabricloader 0.16.3] -> add:fabricloader 0.16.9 ([[0.16.9,∞)])]
+[18:52:16] [main/ERROR]: Incompatible mods found!
+net.fabricmc.loader.impl.FormattedException: Some of your mods are incompatible with the game or each other!
+A potential solution has been determined, this may resolve your problem:
+	 - Install fabric-api, any version.
+	 - Replace mod 'Fabric Loader' (fabricloader) 0.16.3 with version 0.16.9 or later.
+More details:
+	 - Mod 'Defile' (defile) 1.0.0-1.20.1 requires any version of fabric-api, which is missing!
+	 - Mod 'Ratatouille' (ratatouille) 1.0.7-1.20.1 requires version 0.16.9 or later of mod 'Fabric Loader' (fabricloader), but only the wrong version is present: 0.16.3!
+	 - Mod 'Ratatouille' (ratatouille) 1.0.7-1.20.1 requires any version of fabric-api, which is missing!
+	 - Mod 'DataSync-Minecraft' (datasync_minecraft) 0.6.1 requires any version of fabric-api, which is missing!
+	at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:51) ~[fabric-loader-0.16.3.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:196) ~[fabric-loader-0.16.3.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) ~[fabric-loader-0.16.3.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) ~[fabric-loader-0.16.3.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) ~[fabric-loader-0.16.3.jar:?]
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69) ~[fabric-loader-0.16.3.jar:?]
+	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69) ~[fabric-server-launch.jar:1.0.1]
